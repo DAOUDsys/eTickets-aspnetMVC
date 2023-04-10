@@ -1,16 +1,20 @@
 ﻿using eTicketsWeb.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eTicketsWeb.Models
 {
     public class Movie
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
+        [Display(Name = "Name")]
         public string Name { get; set; }
+        [Display(Name = "Description")]
         public string Description { get; set; }
         public DateTime StartDate { get; set;}
         public DateTime EndDate { get; set;}
         public double Price { get; set; }
+        [Display(Name = "Image")]
         public string ImageURL { get; set; }
         public MovieCategory MovieCategory { get; set; }
 
